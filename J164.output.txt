@@ -1,29 +1,29 @@
-Grid : 3
+Grid : 3x3
 - Compute stripes
     Stripes 16 : 8 (4) 8 (5) 
-- Search covering with 1 lines
-- Search covering with 2 lines
+- Search covering with 1 stripes
+- Search covering with 2 stripes
     Found : 
 [31m■ [0m[32m■ [0m[32m■ [0m
 [31m■ [0m[31m■ [0m[31m■ [0m
 [32m■ [0m[32m■ [0m[31m■ [0m
 
-Grid : 4
+Grid : 4x4
 - Compute stripes
     Stripes 44 : 8 (5) 24 (6) 12 (7) 
-- Search covering with 2 lines
-- Search covering with 3 lines
+- Search covering with 2 stripes
+- Search covering with 3 stripes
     Found : 
 [32m■ [0m[32m■ [0m[32m■ [0m[33m■ [0m
 [31m■ [0m[33m■ [0m[32m■ [0m[32m■ [0m
 [31m■ [0m[31m■ [0m[31m■ [0m[32m■ [0m
 [33m■ [0m[33m■ [0m[31m■ [0m[31m■ [0m
 
-Grid : 5
+Grid : 5x5
 - Compute stripes
     Stripes 116 : 24 (6) 44 (7) 32 (8) 16 (9) 
-- Search covering with 3 lines
-- Search covering with 4 lines
+- Search covering with 3 stripes
+- Search covering with 4 stripes
     Found : 
 [34m■ [0m[31m■ [0m[31m■ [0m[33m■ [0m[33m■ [0m
 [34m■ [0m[34m■ [0m[31m■ [0m[33m■ [0m[32m■ [0m
@@ -31,11 +31,11 @@ Grid : 5
 [32m■ [0m[33m■ [0m[31m■ [0m[34m■ [0m[34m■ [0m
 [33m■ [0m[33m■ [0m[31m■ [0m[31m■ [0m[34m■ [0m
 
-Grid : 6
+Grid : 6x6
 - Compute stripes
     Stripes 236 : 8 (6) 16 (7) 88 (8) 48 (9) 56 (10) 20 (11) 
-- Search covering with 4 lines
-- Search covering with 5 lines
+- Search covering with 4 stripes
+- Search covering with 5 stripes
     Found : 
 [31m■ [0m[31m■ [0m[31m■ [0m[33m■ [0m[33m■ [0m[34m■ [0m
 [35m■ [0m[35m■ [0m[31m■ [0m[31m■ [0m[31m■ [0m[34m■ [0m
@@ -44,11 +44,11 @@ Grid : 6
 [34m■ [0m[32m■ [0m[32m■ [0m[32m■ [0m[35m■ [0m[35m■ [0m
 [34m■ [0m[33m■ [0m[33m■ [0m[32m■ [0m[32m■ [0m[32m■ [0m
 
-Grid : 7
+Grid : 7x7
 - Compute stripes
     Stripes 484 : 8 (6) 40 (8) 160 (9) 112 (10) 68 (11) 72 (12) 24 (13) 
-- Search covering with 5 lines
-- Search covering with 6 lines
+- Search covering with 5 stripes
+- Search covering with 6 stripes
     Found : 
 [36m■ [0m[36m■ [0m[32m■ [0m[32m■ [0m[32m■ [0m[32m■ [0m[34m■ [0m
 [32m■ [0m[32m■ [0m[32m■ [0m[34m■ [0m[34m■ [0m[34m■ [0m[35m■ [0m
@@ -58,11 +58,11 @@ Grid : 7
 [35m■ [0m[35m■ [0m[33m■ [0m[33m■ [0m[31m■ [0m[31m■ [0m[31m■ [0m
 [33m■ [0m[31m■ [0m[31m■ [0m[31m■ [0m[31m■ [0m[36m■ [0m[36m■ [0m
 
-Grid : 8
+Grid : 8x8
 - Compute stripes
     Stripes 820 : 8 (6) 16 (8) 48 (9) 240 (10) 160 (11) 104 (12) 120 (13) 96 (14) 28 (15) 
-- Search covering with 6 lines
-- Search covering with 7 lines
+- Search covering with 6 stripes
+- Search covering with 7 stripes
     Found : 
 [34m■ [0m[37m■ [0m[33m■ [0m[33m■ [0m[35m■ [0m[35m■ [0m[36m■ [0m[36m■ [0m
 [34m■ [0m[37m■ [0m[37m■ [0m[33m■ [0m[33m■ [0m[36m■ [0m[36m■ [0m[32m■ [0m

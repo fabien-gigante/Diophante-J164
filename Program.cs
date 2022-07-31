@@ -46,7 +46,7 @@ class Grid {
   readonly List<Square> squares;
   List<List<ulong>>? stripes;
   public Grid(int size) {
-    Console.WriteLine($"Grid : {size}");
+    Console.WriteLine($"Grid : {size}x{size}");
     this.size = size; squares = new(size);
     for (int id = 0, y = 0; y < size; y++) for (int x = 0; x < size; x++, id++) squares.Add(new Square(x, y, id));
   }
@@ -96,7 +96,7 @@ class Grid {
   }
   public void SearchCovering(int n) {
     ComputeStripes();
-    Console.WriteLine($"- Search covering with {n} lines");
+    Console.WriteLine($"- Search covering with {n} stripes");
     ulong full = (ulong.MaxValue) >> (64 - size * size);
     foreach (var l in Choose(n, stripes.Count - 1, full)) {
       Console.WriteLine("    Found : " + CoveringToString(l));
