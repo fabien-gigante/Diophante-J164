@@ -10,7 +10,7 @@ Grid : 3
 - Search covering with 1 lines
 - Search covering with 2 lines
     Found : 
-[31m■ [0m[32m■ [0m[32m■ [0m
+`#ff0000`■ [0m[32m■ [0m[32m■ [0m
 [31m■ [0m[31m■ [0m[31m■ [0m
 [32m■ [0m[32m■ [0m[31m■ [0m
 ```
