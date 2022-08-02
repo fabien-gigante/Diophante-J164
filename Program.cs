@@ -38,7 +38,7 @@ class Square: IComparer<Square> {
   }
   public bool IntersectLine(Segment line) => Edges().Any(s => Segment.IntersectLineSegment(line, s));
   public override int GetHashCode() => Id;
-  public int Compare(Square? x, Square? y) => Math.Sign((y?.Id ?? 0) - (x?.Id ?? 0));
+  public int Compare(Square? x, Square? y) => Math.Sign((y?.Id ?? -1) - (x?.Id ?? -1));
 }
 
 class Grid {
