@@ -8,12 +8,13 @@ using Point = Maths.Vector2D;
 
 new J164().Run();
 
-readonly struct Segment {
+readonly struct Segment : IEquatable<Segment> {
   public readonly Point a, b;
   public Segment(Point a, Point b) { this.a = a; this.b = b; }
   public static implicit operator Segment((Point a, Point b) s) => new(s.a, s.b);
+  public static implicit operator (Point a, Point b)(Segment s) => (s.a, s.b);
   public Point Interpolate(number t) => a * (1 - t) + b * t;
-  public static bool IntersectLineSegment(Segment s1, Segment s2) {
+  public static bool IntersectLineSegment(Segment /*Line*/ s1, Segment s2) {
     const number eplison = 1e-12;
     number deno = Point.Determinant(s1.b - s1.a, s2.b - s2.a);
     number t2 = Point.Determinant(s2.a - s1.a, s1.b - s1.a) / deno;
@@ -26,19 +27,24 @@ readonly struct Segment {
     number t2 = Point.Determinant(s2.a - s1.a, s1.b - s1.a) / deno;
     return eplison < t1 && t1 < 1 - eplison && eplison < t2 && t2 < 1 - eplison;
   }
+  public override int GetHashCode() => (a, b).GetHashCode();
+  public bool Equals(Segment other) => (a,b).Equals(other);
+  public override bool Equals(object? obj) => obj is Segment other && Equals(other);
 }
 
-class Square: IComparer<Square> {
+readonly struct Square : IComparable<Square>, IEquatable<Square> {
   readonly Point origin;
-  public int Id { get; private set; }
+  public readonly int Id { get; }
   public Square(number x, number y, int id) { origin = (x, y); Id = id; }
   public IEnumerable<Segment> Edges() {
-    Point a = origin, b = origin + (1,0), c = origin + (1,1), d = origin + (0,1);
+    Point a = origin, b = origin + (1, 0), c = origin + (1, 1), d = origin + (0, 1);
     return new Segment[] { (a, b), (b, c), (c, d), (d, a) };
   }
-  public bool IntersectLine(Segment line) => Edges().Any(s => Segment.IntersectLineSegment(line, s));
+  public bool IntersectLine(Segment /*Line*/ line) => Edges().Any(s => Segment.IntersectLineSegment(line, s));
   public override int GetHashCode() => Id;
-  public int Compare(Square? x, Square? y) => Math.Sign((y?.Id ?? -1) - (x?.Id ?? -1));
+  public int CompareTo(Square other) => Id.CompareTo(other.Id);
+  public bool Equals(Square other) => Id == other.Id;
+  public override bool Equals(object? obj) => obj is Square other && Equals(other);
 }
 
 class Grid {
